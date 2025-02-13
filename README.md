@@ -32,6 +32,14 @@ This project provided a great opportunity to explore Dockerfile creation for dif
 
 
 ### 3. Kubernetes and ArgoCD Setup
+- Created a secret within the namespace for pulling the Docker images, as the images are stored in ACR inside a private repository.
+```sh
+kubectl create secret docker-registry <secret-name> \
+    --namespace <namespace> \
+    --docker-server=<container-registry-name>.azurecr.io \
+    --docker-username=<service-principal-ID> \
+    --docker-password=<service-principal-password>
+
 - Provisioned an **Azure Kubernetes Service (AKS) cluster**.
 - Installed **ArgoCD** to manage Kubernetes deployments.
 - Configured ArgoCD to watch the repository for changes and apply the latest **Kubernetes Deployment and Service** manifests.

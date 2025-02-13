@@ -1,6 +1,7 @@
 # Voting App Deployment with Azure DevOps and GitOps
 
-![image](https://github.com/user-attachments/assets/f68e2f4f-e76f-49be-8db8-0ef84e3a2453)
+![Screenshot 2025-02-12 220348](https://github.com/user-attachments/assets/2c815263-c656-4bfe-9449-701330814ffa)
+
 
 
 ## Overview

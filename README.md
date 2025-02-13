@@ -39,7 +39,7 @@ kubectl create secret docker-registry <secret-name> \
     --docker-server=<container-registry-name>.azurecr.io \
     --docker-username=<service-principal-ID> \
     --docker-password=<service-principal-password>
-
+```
 - Provisioned an **Azure Kubernetes Service (AKS) cluster**.
 - Installed **ArgoCD** to manage Kubernetes deployments.
 - Configured ArgoCD to watch the repository for changes and apply the latest **Kubernetes Deployment and Service** manifests.

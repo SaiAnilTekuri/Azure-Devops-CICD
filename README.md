@@ -1,5 +1,8 @@
 # Voting App Deployment with Azure DevOps and GitOps
 
+![image](https://github.com/user-attachments/assets/f68e2f4f-e76f-49be-8db8-0ef84e3a2453)
+
+
 ## Overview
 This project demonstrates how to establish a CI/CD workflow using Azure DevOps with a GitOps approach, leveraging ArgoCD to automate deployments. The application deployed is the **dockersamples/example-voting-app**, developed by the Docker community.
 

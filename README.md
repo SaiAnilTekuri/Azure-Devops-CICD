@@ -3,6 +3,8 @@
 ## Overview
 This project demonstrates how to establish a CI/CD workflow using Azure DevOps with a GitOps approach, leveraging ArgoCD to automate deployments. The application deployed is the **dockersamples/example-voting-app**, developed by the Docker community.
 
+**Repo:** https://github.com/dockersamples/example-voting-app/tree/main
+
 ## Application Components
 The application consists of multiple microservices written in different languages:
 - **Vote (Python)** – A frontend web app for voting between two options.
@@ -11,7 +13,7 @@ The application consists of multiple microservices written in different language
 - **PostgreSQL** – Stores the votes, backed by a Docker volume.
 - **Result (Node.js)** – A web app that displays real-time voting results.
 
-This project provided a great opportunity to explore Dockerfile creation for different languages and services.
+This project provided a great opportunity to explore Dockerfile creation for different languages and services and to work with Azure DevOps services.
 
 ## Project Workflow
 ### 1. Setup Azure DevOps
@@ -19,14 +21,26 @@ This project provided a great opportunity to explore Dockerfile creation for dif
 - Created a **project** within the organization.
 - Added the application code to an **Azure Repos repository**.
 
+<img width="959" alt="Screenshot 2025-02-12 210744" src="https://github.com/user-attachments/assets/eb0c0fcf-452a-4950-8e58-faaf3b5329d6" />
+
+
 ### 2. CI Pipeline Configuration
 - Built **three CI pipelines** (for `vote`, `result`, and `worker`).
 - Created a **self-hosted VM runner** for executing the pipelines.
+
+<img width="959" alt="Screenshot 2025-02-12 210702" src="https://github.com/user-attachments/assets/df992155-6e05-4d43-ac12-5c1921307ccd" />
+
 
 ### 3. Kubernetes and ArgoCD Setup
 - Provisioned an **Azure Kubernetes Service (AKS) cluster**.
 - Installed **ArgoCD** to manage Kubernetes deployments.
 - Configured ArgoCD to watch the repository for changes and apply the latest **Kubernetes Deployment and Service** manifests.
+
+<img width="960" alt="Screenshot 2025-02-12 211108" src="https://github.com/user-attachments/assets/d6f6435c-f1e4-4d63-944e-8007adec2dd1" />
+
+<img width="960" alt="Screenshot 2025-02-12 210901" src="https://github.com/user-attachments/assets/22a7fd1e-32a3-447a-b2ed-1c07de9fef81" />
+
+
 
 ## Key Technologies Used
 - **Azure DevOps** – For managing repositories, pipelines, and deployments.
